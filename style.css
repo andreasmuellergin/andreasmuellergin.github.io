@@ -1,0 +1,503 @@
+/* Define global color and style variables */
+:root {
+    /* Core Colors */
+    --primary-color: #000000; /* Black (headings, logo, links) */
+    --secondary-color: #007bff; /* Lighter action blue (icons, gradient) */
+    --white-color: #ffffff; /* White (backgrounds, text on dark, buttons) */
+    /* Backgrounds */
+    --dark-background: #343a40; /* Dark grey (footer) */
+    --button-hover-bg: #f0f0f0; /* Off-white button hover */
+    /* Text Colors */
+    --text-color-dark: #333; /* Main dark text */
+    --text-color-medium: #555; /* Medium grey text (paragraphs) */
+    --text-color-light: #f8f9fa; /* Light text (on dark backgrounds) */
+    --text-color-subtle: #666; /* Subtle grey text (contact note) */
+    --footer-link-color: #adb5bd; /* Specific color for footer links */
+    /* Borders & Shadows */
+    --border-color: #eaeaea; /* Light border color */
+    --box-shadow-light: rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    --box-shadow-medium: rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    /* Placeholders */
+    --placeholder-text-color: #888; /* Placeholder text */
+    --placeholder-bg-color: #e0e0e0; /* Placeholder background */
+}
+
+/* Initial state for elements that will animate */
+.animate-on-scroll {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(200px); /* Start 50px below final position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition for opacity and position */
+    will-change: opacity, transform; /* Hint to browser for optimization */
+}
+
+    /* Final state - added by JavaScript when element is visible */
+    .animate-on-scroll.is-visible {
+        opacity: 1; /* Fade in to full opacity */
+        transform: translateY(0); /* Move up to final position */
+    }
+
+/* Basic Reset & Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Adjust based on header height */
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color-dark);
+    background-color: var(--white-color);
+}
+
+/* Container */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+#header {
+    background-color: var(--white-color);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--box-shadow-light);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+    nav a:hover, nav a.active {
+        color: var(--primary-color);
+        /* background-color: var(--light-background); Optional subtle background */
+    }
+
+
+
+/* Hero Section */
+#start {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient using variables */
+    /*background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));*/
+    /* OR Image Placeholder */
+    background-image: url('images/scene-laptop.avif');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hero-fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color); /* White background */
+    opacity: 0; /* Start fully transparent */
+    z-index: 2; /* Position above background */
+    pointer-events: none; /* Allow clicks/interaction with content below */
+    /* Optional: Add a slight transition for smoothness if JS updates lag */
+    /* transition: opacity 0.05s linear; */
+}
+
+.hero-content {
+    position: relative;
+    font-size: 2.2em;
+    padding-bottom: 5em;
+    z-index: 3;
+    color: var(--white-color);
+}
+
+#start h1 {
+    font-size: 2.2em;
+    font-weight: normal;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+#start h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#start p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px var(--box-shadow-medium);
+}
+
+    .cta-button:hover {
+        background-color: var(--button-hover-bg);
+        color: var(--primary-color); /* Keep primary color or define a darker one */
+        transform: translateY(-2px);
+    }
+
+/* Content Sections */
+.content-section {
+    padding: 70px 0;
+    margin-bottom: 50px;
+}
+
+    .content-section h2 {
+        text-align: center;
+        font-size: 2.2em;
+        margin-bottom: 50px;
+        color: var(--primary-color);
+    }
+
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.service-item {
+    background-color: var(--white-color);
+    padding: 30px 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px var(--box-shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .service-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px var(--box-shadow-medium);
+    }
+
+    .service-item .icon-placeholder {
+        font-size: 2.5em;
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 1.4em;
+        color: var(--text-color-dark);
+        margin-bottom: 10px;
+    }
+
+    .service-item p {
+        font-size: 0.95em;
+        color: var(--text-color-medium);
+    }
+
+/* About Us Section */
+.about-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+ Example if using real image 
+ .about-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+} 
+
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+    .about-text h3 {
+        font-size: 1.6em;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+
+    .about-text p {
+        margin-bottom: 15px;
+        color: var(--text-color-medium);
+    }
+
+/* Logos Section */
+#logos {
+    padding: 40px 0;
+}
+
+.logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo-placeholder {
+    color: var(--placeholder-text-color); /* Adjusted from #aaa */
+    font-style: italic;
+    padding: 10px;
+}
+/* Example if using real logos */
+/* .logos-grid img {
+     max-height: 50px;
+     opacity: 0.7;
+     transition: opacity 0.3s ease;
+}
+.logos-grid img:hover {
+     opacity: 1;
+} */
+
+
+/* Contact Section */
+.contact-container {
+    text-align: center;
+    max-width: 700px;
+}
+
+#kontakt a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+    #kontakt a:hover {
+        text-decoration: underline;
+    }
+
+#kontakt p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+    /* Contact form note styling */
+    #kontakt p em {
+        color: var(--text-color-subtle); /* Replaced #666 */
+    }
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-background);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+    footer p {
+        margin-bottom: 8px;
+        font-size: 0.9em;
+    }
+
+    footer a {
+        color: var(--footer-link-color);
+        text-decoration: none;
+        margin: 0 8px;
+        transition: color 0.3s ease;
+    }
+
+        footer a:hover {
+            color: var(--white-color);
+            text-decoration: underline;
+        }
+
+/* --- Basic Responsiveness --- */
+
+@media (max-width: 992px) {
+    .about-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 60px;
+    }
+
+    #header {
+        padding: 10px 0;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 5px;
+    }
+
+    #start {
+        min-height: 60vh;
+    }
+
+        #start h2 {
+            font-size: 2.2em;
+        }
+
+        #start p {
+            font-size: 1.1em;
+        }
+
+    .content-section h2 {
+        font-size: 1.9em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logos-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.4em;
+    }
+
+    nav a {
+        padding: 4px 8px;
+        font-size: 0.9em;
+    }
+
+    #start h1 {
+        font-size: 1.5em;
+    }
+
+    #start h2 {
+        font-size: 1.8em;
+    }
+
+    #start p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    .content-section {
+        padding: 50px 0;
+    }
+
+        .content-section h2 {
+            font-size: 1.7em;
+            margin-bottom: 30px;
+        }
+
+    .service-item h3 {
+        font-size: 1.2em;
+    }
+
+    .about-text h3 {
+        font-size: 1.4em;
+    }
+
+    #kontakt p {
+        font-size: 1em;
+    }
+}
+
+.content-section {
+    padding: 50px 0;
+}
+
+    .content-section h2 {
+        font-size: 1.7em;
+        margin-bottom: 30px;
+    }
+
+.service-item h3 {
+    font-size: 1.2em;
+}
+
+.about-text h3 {
+    font-size: 1.4em;
+}
+
+#kontakt p {
+    font-size: 1em;
+}
+}

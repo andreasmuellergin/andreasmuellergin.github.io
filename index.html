@@ -1,187 +1,153 @@
-<!DOCTYPE HTML>
-<!--
-    Solid State by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+﻿<!DOCTYPE html>
+<html lang="de">
 <head>
-    <title>Solid State by HTML5 UP</title>
-    <meta name="referrer" content="origin">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMB Software | Softwareentwicklung</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <!-- Optional: Link to Font Awesome for icons -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
 </head>
-<body class="is-preload">
+<body>
 
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-
-        <!-- Header -->
-        <header id="header" class="alt">
-            <div class="row">
-                <h1>
-                    <a style="color:white" href="index.html">AMB-Software</a>
-                </h1>
-                <h1 style="display: flex; align-items: center; justify-content: center;">
-                    <img src="images/AMB Software Icon_small.png" style="max-width: 100%; height: 48px;" />
-                </h1>
-            </div>
-
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">AMB Software</a>
             <nav>
-                <div class="links" style="display: flex; font-size:13px;">
-                    <div><a href="#banner">Start</a></div>
-                    <div><a href="#infos">Infos</a></div>
-                    <div><a href="#services">Services</a></div>
-                    <div><a href="#projekte">Projekte</a></div>
-                    <div><a href="#kontakt">Kontakt</a></div>
-                </div>
+                <ul>
+                    <li><a href="#start">Start</a></li>
+                    <li><a href="#infos">Infos</a></li>
+                    <li><a href="#leistungen">Leistungen</a></li>
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <!-- Banner -->
-        <section id="banner">
-            <div style="position: relative;">
-                <img style="position:relative;" width="100%" src="images/scene-laptop.avif">
+    <main>
+        <section id="start">
+            <div class="hero-background"></div>
+            <div class="hero-fade-overlay"></div>
+            <div class="hero-content container">
+                <h1>AMB<br />Software</h1>
 
-                </img>
-                <div class="absolute-center" style="font-size: 4em; top:26%;line-height: 1.2em;color:white;">
-                    AMB<br />Software
+            </div>
+        </section>
+
+        <section id="infos" class="content-section animate-on-scroll">
+            <div class="container">
+                <div class="about-layout">
+
+                    <div class="about-text">
+                        <h3>Über mich</h3>
+                        <p>
+                            Ich heiße Andreas Müller-Blümlein und arbeite seit 15 Jahren als Softwareentwickler.<br />
+                            Ich erstellte Windows Anwendungen für die Verwaltung und Darstellung von Serverdaten.<br />
+                            Ich konzipierte Tools und Entwickler-Schnittstellen für den Zugriff auf Industriegeräte.<br />
+                            Ich betrieb Services in der Cloud, über die Kundendaten DSGVO-konform millionenfach verarbeitet wurden.<br />
+                            Ich programmierte die Firmware zur Steuerung der Kameras in hochgenauen Messinstrumenten.
+                        </p>
+                        <p>
+                            Ich habe viele Lösungen für verschiedene Probleme erarbeitet. Ich würde Ihnen gern auch bei Ihrem Problem helfen.
+                        </p>
+                        <!-- Add more paragraphs if needed -->
+                    </div>
+                    <div class="about-image">
+                        <!-- Placeholder for image - replace with <img> tag -->
+                        <img height="450" src="images/ueber-mich.avif" />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Wrapper -->
-        <section id="wrapper">
-
-            <!-- One -->
-            <section id="one" class="wrapper spotlight style1">
-                <div class="inner">
-                    <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-                    <div class="content">
-                        <h2 class="major">Magna arcu feugiat</h2>
-                        <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                        <a href="#" class="special">Learn more</a>
+        <section id="leistungen" class="content-section animate-on-scroll">
+            <div class="container">
+                <h2>Was wir machen</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <!-- Replace with actual icon: <i class="fas fa-laptop-code"></i> or <img> -->
+                        <div class="icon-placeholder">[Web Icon]</div>
+                        <h3>Webentwicklung</h3>
+                        <p>Moderne und responsive Webanwendungen, die auf Ihre Bedürfnisse zugeschnitten sind.</p>
+                    </div>
+                    <div class="service-item">
+                        <!-- Replace with actual icon: <i class="fas fa-mobile-alt"></i> or <img> -->
+                        <div class="icon-placeholder">[App Icon]</div>
+                        <h3>App-Entwicklung</h3>
+                        <p>Entwicklung nativer oder plattformübergreifender Apps für iOS und Android.</p>
+                    </div>
+                    <div class="service-item">
+                        <!-- Replace with actual icon: <i class="fas fa-comments"></i> or <img> -->
+                        <div class="icon-placeholder">[Consult Icon]</div>
+                        <h3>Beratung & Konzeption</h3>
+                        <p>Wir unterstützen Sie von der ersten Idee bis zur technischen Planung Ihres Projekts.</p>
                     </div>
                 </div>
-            </section>
-
-            <!-- Two -->
-            <section id="two" class="wrapper alt spotlight style2">
-                <div class="inner">
-                    <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-                    <div class="content">
-                        <h2 class="major">Tempus adipiscing</h2>
-                        <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                        <a href="#" class="special">Learn more</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Three -->
-            <section id="three" class="wrapper spotlight style3">
-                <div class="inner">
-                    <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-                    <div class="content">
-                        <h2 class="major">Nullam dignissim</h2>
-                        <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                        <a href="#" class="special">Learn more</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Four -->
-            <section id="four" class="wrapper alt style1">
-                <div class="inner">
-                    <h2 class="major">Vitae phasellus</h2>
-                    <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-                    <section class="features">
-                        <article>
-                            <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-                            <h3 class="major">Sed feugiat lorem</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                            <a href="#" class="special">Learn more</a>
-                        </article>
-                        <article>
-                            <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-                            <h3 class="major">Nisl placerat</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                            <a href="#" class="special">Learn more</a>
-                        </article>
-                        <article>
-                            <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-                            <h3 class="major">Ante fermentum</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                            <a href="#" class="special">Learn more</a>
-                        </article>
-                        <article>
-                            <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-                            <h3 class="major">Fusce consequat</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                            <a href="#" class="special">Learn more</a>
-                        </article>
-                    </section>
-                    <ul class="actions">
-                        <li><a href="#" class="button">Browse All</a></li>
-                    </ul>
-                </div>
-            </section>
-
-        </section>
-
-        <!-- Footer -->
-        <section id="footer">
-            <div class="inner">
-                <h2 class="major">Get in touch</h2>
-                <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-                <form method="post" action="https://formspree.io/f/xgvozkae">
-                    <div class="fields">
-                        <div class="field">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" />
-                        </div>
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required />
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="4" required></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send" /></li>
-                    </ul>
-                </form>
-                <ul class="contact">
-                    <li class="icon solid fa-home">
-                        Untitled Inc<br />
-                        1234 Somewhere Road Suite #2894<br />
-                        Nashville, TN 00000-0000
-                    </li>
-                    <li class="icon solid fa-phone">(000) 000-0000</li>
-                    <li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-                    <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-                    <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-                    <li class="icon solid fa-map"><a target="_blank" href="https://maps.app.goo.gl/TJwmRzjd5etx3i2H8">Google Maps</a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy;2025 Andreas Müller-Blümlein Softwareentwicklung</li>
-                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
             </div>
         </section>
 
-    </div>
+        <section id="ueber-uns" class="content-section animate-on-scroll">
+            <div class="container">
+                <h2>Wer wir sind</h2>
+                <div class="about-layout">
+                    <div class="about-image">
+                        <!-- Placeholder for image - replace with <img> tag -->
+                        <div class="image-placeholder">[Bild hier]</div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Ihr Partner für digitale Lösungen</h3>
+                        <p>AMB Software steht für maßgeschneiderte Softwarelösungen. Mit Fokus auf Qualität und enger Zusammenarbeit realisieren wir Ihre digitalen Visionen.</p>
+                        <p>Wir legen Wert auf transparente Prozesse und eine partnerschaftliche Beziehung zu unseren Kunden.</p>
+                        <!-- Add more paragraphs if needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+        <section id="logos" class="content-section animate-on-scroll">
+            <div class="container">
+                <!-- No explicit title on the live site for logos -->
+                <div class="logos-grid">
+                    <!-- Replace with actual <img> tags for logos -->
+                    <div class="logo-placeholder">[Logo Kunde 1]</div>
+                    <div class="logo-placeholder">[Logo Kunde 2]</div>
+                    <div class="logo-placeholder">[Logo Kunde 3]</div>
+                    <!-- Add more logos as needed -->
+                </div>
+            </div>
+        </section>
 
+        <section id="kontakt" class="content-section animate-on-scroll">
+            <div class="container contact-container">
+                <h2>Kontakt</h2>
+                <p>Haben Sie Fragen oder möchten Sie ein Projekt besprechen? <br> Schreiben Sie uns eine Nachricht oder rufen Sie uns an.</p>
+                <p>
+                    E-Mail: <a href="mailto:info@amb-software.de">info@amb-software.de</a><br>
+                    <!-- Add phone or address if desired based on your Impressum -->
+                    <!-- Telefon: [Ihre Telefonnummer] -->
+                </p>
+                <p style="margin-top: 20px;">
+                    <a href="#start" class="cta-button">Nach oben</a>
+                </p>
+                <p style="margin-top: 30px; font-size: 0.9em; color: #666;"><em>Hinweis: Ein interaktives Kontaktformular ist hier nicht enthalten. Es kann mit Diensten wie Formspree hinzugefügt werden.</em></p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 AMB Software.</p> <!-- Update year if needed -->
+            <p>
+                <!-- Replace # with actual links to your Impressum/Datenschutz pages/files -->
+                <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
-</html>
+</html> 

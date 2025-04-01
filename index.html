@@ -19,8 +19,8 @@
                 <ul>
                     <li><a href="#start">Start</a></li>
                     <li><a href="#infos">Infos</a></li>
-                    <li><a href="#leistungen">Leistungen</a></li>
-                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#projekte">Projekte</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
@@ -42,7 +42,7 @@
                 <div class="about-layout">
 
                     <div class="about-text">
-                        <h3>Über mich</h3>
+                        <h3 style="margin-bottom:40px;">Über mich</h3>
                         <p>
                             Ich heiße Andreas Müller-Blümlein und arbeite seit 15 Jahren als Softwareentwickler.<br />
                             Ich erstellte Windows Anwendungen für die Verwaltung und Darstellung von Serverdaten.<br />
@@ -53,7 +53,9 @@
                         <p>
                             Ich habe viele Lösungen für verschiedene Probleme erarbeitet. Ich würde Ihnen gern auch bei Ihrem Problem helfen.
                         </p>
-                        <!-- Add more paragraphs if needed -->
+                        <p style="margin-top: 40px;">
+                            <a href="#kontakt" class="cta-button">Kontakt</a>
+                        </p>
                     </div>
                     <div class="about-image">
                         <!-- Placeholder for image - replace with <img> tag -->
@@ -63,47 +65,86 @@
             </div>
         </section>
 
-        <section id="leistungen" class="content-section animate-on-scroll">
-            <div class="container">
-                <h2>Was wir machen</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <!-- Replace with actual icon: <i class="fas fa-laptop-code"></i> or <img> -->
-                        <div class="icon-placeholder">[Web Icon]</div>
-                        <h3>Webentwicklung</h3>
-                        <p>Moderne und responsive Webanwendungen, die auf Ihre Bedürfnisse zugeschnitten sind.</p>
+        <section id="service" class="content-section animate-on-scroll">
+            <div class="container service-container">
+                <div class="service-layout">
+
+                    <div class="service-text">
+                        <h3>Service</h3>
+                        <h4>Konzeption</h4>
+                        <p>
+                            Großer Erfahrungsschatz und hohe Auffassungsgabe befähigen mich Prozesse zu analysieren und zielgenaue Lösungen zu erstellen. Dabei behalte ich Anforderungen und Kosten stets fest im Blick.
+                        </p>
+                        <h4>Entwicklung</h4>
+                        <p>
+                            Vielversprechende Konzepte führen nur zu einem erfolgreichen Produkt, wenn die Qualität stimmt. Guter Code bedient alle Anforderungen und ist fehlerfrei. Ausgezeichneter Code ist außerdem leicht lesbar, testbar und wartbar.
+                        </p>
+                        <h4>Überwachung</h4>
+                        <p>
+                            Softwareprodukte sind nicht statisch. Im Betrieb nehmen sie verschiedene Zustände ein - erwünschte und unerwünschte. Logs und Monitoring sind nur zwei von vielen Methoden um Zustände zu verstehen und zu beeinflussen.
+                        </p>
                     </div>
-                    <div class="service-item">
-                        <!-- Replace with actual icon: <i class="fas fa-mobile-alt"></i> or <img> -->
-                        <div class="icon-placeholder">[App Icon]</div>
-                        <h3>App-Entwicklung</h3>
-                        <p>Entwicklung nativer oder plattformübergreifender Apps für iOS und Android.</p>
-                    </div>
-                    <div class="service-item">
-                        <!-- Replace with actual icon: <i class="fas fa-comments"></i> or <img> -->
-                        <div class="icon-placeholder">[Consult Icon]</div>
-                        <h3>Beratung & Konzeption</h3>
-                        <p>Wir unterstützen Sie von der ersten Idee bis zur technischen Planung Ihres Projekts.</p>
+                    <div class="service-image">
+                        <!-- Placeholder for image - replace with <img> tag -->
+                        <img height="450" src="images/clean-code.avif" />
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="ueber-uns" class="content-section animate-on-scroll">
+        <section id="projekte" class="content-section animate-on-scroll">
             <div class="container">
-                <h2>Wer wir sind</h2>
-                <div class="about-layout">
-                    <div class="about-image">
-                        <!-- Placeholder for image - replace with <img> tag -->
-                        <div class="image-placeholder">[Bild hier]</div>
+                <h3 style="margin-bottom:2em;">Projekte</h3>
+
+                <div class="projekt-row">
+                    <div class="projekt-icon"> </div>
+                    <div class="projekt-info">
+                        <p>April 2022 - Heute</p>
+                        <h4>
+                            Softwareentwickler<br />freischaffend
+                        </h4>
                     </div>
-                    <div class="about-text">
-                        <h3>Ihr Partner für digitale Lösungen</h3>
-                        <p>AMB Software steht für maßgeschneiderte Softwarelösungen. Mit Fokus auf Qualität und enger Zusammenarbeit realisieren wir Ihre digitalen Visionen.</p>
-                        <p>Wir legen Wert auf transparente Prozesse und eine partnerschaftliche Beziehung zu unseren Kunden.</p>
-                        <!-- Add more paragraphs if needed -->
+                    <div class="projekt-details">
+                        Konzeption, Umsetzung und Überwachung von Softwareentwicklung<br />
+                        Technologien:<br />
+                        C#, PHP, CSS, SQL, .Net, Blazor WASM, WPF,HumHub, ASP Core<br />
+                        #Microservices #REST
                     </div>
                 </div>
+
+                <div class="projekt-row">
+                    <div class="projekt-icon"> </div>
+                    <div class="projekt-info">
+                        <p>August 2018 - März 2022</p>
+                        <h4>
+                            Softwareentwickler<br />Volkswagen
+                        </h4>
+                    </div>
+                    <div class="projekt-details">
+                        Fahrzeugdaten-API, Identitätsservice, Verkaufsplattform<br />
+                        Technologien:<br />
+                        kotlin, spring boot, golang, typescript, react<br />
+                        #DevOps #AWS #SQL #NOSQL #REST #Microservice
+                    </div>
+                </div>
+
+                <div class="projekt-row">
+                    <div class="projekt-icon"> </div>
+                    <div class="projekt-info">
+                        <p>August 2015 - Juli 2018</p>
+                        <h4>
+                            Softwareentwickler (Projektleitung)<br />
+                            Flexim
+                        </h4>
+                    </div>
+                    <div class="projekt-details">
+                        Software und -komponenten zur Gerätekommunikation und Datenauswertung<br />
+                        Technologien:<br />
+                        C#, .Net Framework, WPF<br />
+                        #Scrum #CleanCode #TestAutomation
+                    </div>
+                </div>
+
             </div>
         </section>
 

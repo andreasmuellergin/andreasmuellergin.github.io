@@ -43,6 +43,10 @@
     padding: 0;
 }
 
+h3 {
+    font-weight: 400;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px; /* Adjust based on header height */
@@ -50,6 +54,9 @@ html {
 
 body {
     font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
     line-height: 1.7;
     color: var(--text-color-dark);
     background-color: var(--white-color);
@@ -79,6 +86,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: unset;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 .logo {
@@ -92,6 +102,10 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+}
+
+h3 {
+    font-size: 2.2em;
 }
 
 nav a {
@@ -120,6 +134,7 @@ nav a {
     text-align: center;
     padding: 80px 0;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 
 .hero-background {
@@ -260,13 +275,13 @@ nav a {
     gap: 40px;
 }
 
- Example if using real image 
- .about-image img {
+Example if using real image
+.about-image img {
     display: block;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-} 
+}
 
 
 .about-text {
@@ -275,15 +290,90 @@ nav a {
 }
 
     .about-text h3 {
-        font-size: 1.6em;
+        font-size: 2.2em;
         color: var(--primary-color);
         margin-bottom: 15px;
     }
 
     .about-text p {
         margin-bottom: 15px;
-        color: var(--text-color-medium);
+        color: var(--text-color-dark);
     }
+
+.service-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.service-text {
+    flex: 1;
+    text-align: left;
+}
+
+    .service-text h3 {
+        font-size: 2.2em;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        margin-left: 50px;
+    }
+
+    .service-text h4 {
+        margin-bottom: 15px;
+        margin-top: 3px;
+        margin-left: 50px;
+    }
+
+    .service-text p {
+        margin-bottom: 15px;
+        color: var(--text-color-dark);
+        margin-left: 50px;
+    }
+
+.service-image {
+    flex: 1;
+}
+
+    .service-image img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+.service-container {
+    max-width: unset;
+}
+
+#projekte h3{
+    text-align:center;
+}
+
+.projekt-row {
+    display: flex;
+    gap: 3em;
+    margin-bottom: 3em;
+}
+
+.projekt-icon {
+    display: inline-block; /* Or 'block' if it shouldn't flow with text */
+    width: 64px; /* Adjust size as needed, 'em' scales with text */
+    height: 64px; /* Keep aspect ratio or set specific pixels */
+    background-image: url('assets/icons/project.svg'); /* Correct path! */
+    background-repeat: no-repeat; /* Don't tile the icon */
+    background-size: contain; /* Scale the icon to fit the element */
+    background-position: center; /* Center the icon */
+    vertical-align: middle; /* Aligns inline-block elements nicely with text */
+}
+
+.projekt-info {
+    flex: 3;
+} 
+
+.projekt-details{
+    flex:5;
+}
+
 
 /* Logos Section */
 #logos {
@@ -460,6 +550,7 @@ footer {
 
     .content-section {
         padding: 50px 0;
+        margin-bottom: 50px;
     }
 
         .content-section h2 {
@@ -472,7 +563,7 @@ footer {
     }
 
     .about-text h3 {
-        font-size: 1.4em;
+        font-size: 2.2em;
     }
 
     #kontakt p {
@@ -482,6 +573,7 @@ footer {
 
 .content-section {
     padding: 50px 0;
+    margin-bottom: 50px;
 }
 
     .content-section h2 {
@@ -494,7 +586,7 @@ footer {
 }
 
 .about-text h3 {
-    font-size: 1.4em;
+    font-size: 2.2em;
 }
 
 #kontakt p {

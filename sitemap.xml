@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.bluemlein-software.de/</loc>
+    <lastmod>2024-03-15</lastmod> <!-- Date page was last significantly updated (YYYY-MM-DD) -->
+    <changefreq>monthly</changefreq> <!-- How often you expect the content to change -->
+    <priority>1.0</priority>       <!-- Importance relative to other pages (1.0 = highest) -->
+  </url>
+
+  <!-- Impressum (Legal Notice) -->
+  <url>
+    <loc>https://www.bluemlein-software.de/impressum</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>   <!-- Only changes if legal details change -->
+    <priority>0.3</priority>       <!-- Legally required, but low SEO priority -->
+  </url>
+
+  <!-- Datenschutz (Privacy Policy) -->
+  <url>
+    <loc>https://www.bluemlein-software.de/datenschutz</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Add more <url> blocks here for any other important pages -->
+
+</urlset>

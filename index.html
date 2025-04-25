@@ -6,9 +6,15 @@
     <title>AMB Software | Softwareentwicklung</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZRSJ7K9YM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <!-- Optional: Link to Font Awesome for icons -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    gtag('config', 'G-CZRSJ7K9YM');
+    </script>
 </head>
 <body>
 
@@ -202,7 +208,7 @@
         <section id="kontakt" class="content-section animate-on-scroll">
             <div class="container contact-container">
                 <h2>Kontakt</h2>
-                <p>Haben Sie Fragen oder möchten Sie ein Projekt besprechen? <br> Schreiben Sie uns eine Nachricht oder rufen Sie uns an.</p>
+                <p>Haben Sie Fragen oder möchten Sie ein Projekt besprechen? <br> Schreiben Sie mir eine Nachricht oder rufen Sie mich an.</p>
                 <p>
                     E-Mail: <a href="mailto:andreasmuellergin@googlemail.com">andreasmuellergin@googlemail.com</a><br>
                     Telefon: <a href="tel:+4917622001837">0176 2200 1837</a><br><br>
@@ -232,6 +238,13 @@
         </div>
     </footer>
 
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f1f1f1; padding: 10px 20px; text-align: center; z-index: 1000; border-top: 1px solid #ccc; font-size: 14px;">
+        Diese Webseite verwendet Cookies für die opimale Darstellung. 
+        <a href="datenschutz.html" style="color: #007bff; text-decoration: underline;">Was genau gespeichert wird</a>.
+        <button id="accept-cookies" style="margin-left: 15px; padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer;">Einverstanden!</button>
+    </div>
+
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/cookie banner.js"></script>
 </body>
 </html> 

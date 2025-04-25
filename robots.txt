@@ -1,0 +1,19 @@
+# Allow all major search engines full access
+User-agent: *
+Disallow: # By leaving Disallow empty, you allow everything for this agent
+
+# (Optionally add specific Disallow rules for admin areas, specific files,
+# parameters, or temporary directories IF needed, e.g.)
+# Disallow: /temp/
+# Disallow: /private_files/
+# Disallow: /search?query=* # Block internal search results pages
+
+# Specify the location of the XML Sitemap
+Sitemap: https://www.bluemlein-software.de/sitemap.xml
+
+# You might see specific rules for Googlebot, Bingbot etc., but User-agent: * covers them.
+User-agent: Googlebot
+Disallow: # Allow Google fully
+
+User-agent: Bingbot
+Disallow: # Allow Bing fully

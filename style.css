@@ -394,15 +394,6 @@ Example if using real image
     font-style: italic;
     padding: 10px;
 }
-/* Example if using real logos */
-/* .logos-grid img {
-     max-height: 50px;
-     opacity: 0.7;
-     transition: opacity 0.3s ease;
-}
-.logos-grid img:hover {
-     opacity: 1;
-} */
 
 .impressum-container {
     text-align: left;

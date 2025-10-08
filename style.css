@@ -276,7 +276,12 @@ nav a {
     gap: 40px;
 }
 
-Example if using real image
+
+.about-image {
+    max-width: 100%;
+    margin-bottom: 0;
+    flex: 1;
+}
 .about-image img {
     display: block;
     max-width: 100%;
@@ -341,10 +346,6 @@ Example if using real image
         object-fit: cover;
         object-position: center;
     }
-
-.service-container {
-    max-width: unset;
-}
 
 #projekte h3{
     text-align:center;
@@ -526,56 +527,6 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.4em;
-    }
-
-    nav a {
-        padding: 4px 8px;
-        font-size: 0.9em;
-    }
-
-    #start h1 {
-        font-size: 1.5em;
-    }
-
-    #start h2 {
-        font-size: 1.8em;
-    }
-
-    #start p {
-        font-size: 1em;
-    }
-
-    .cta-button {
-        padding: 10px 25px;
-        font-size: 0.9em;
-    }
-
-    .content-section {
-        padding: 50px 0; 
-        margin-bottom: 50px;
-    }
-
-        .content-section h2 {
-            font-size: 1.7em;
-            margin-bottom: 30px;
-        }
-
-    .service-item h3 {
-        font-size: 1.2em;
-    }
-
-    .about-text h3 {
-        font-size: 2.2em;
-    }
-
-    #kontakt p {
-        font-size: 1em;
-    }
-}
-
 .content-section {
     /* padding: 50px 0; */
     margin-bottom: 50px;
@@ -597,4 +548,113 @@ footer {
 #kontakt p {
     font-size: 1em;
 }
+
+/* Survey Section */
+.api-config {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.api-config input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.api-config button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.api-config button:hover {
+    background-color: #45a049;
+}
+
+
+.loading-message {
+    grid-column: 1 / -1; /* Span across all columns */
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.survey-tile {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-left: 5px solid #5cb85c;
+    overflow: hidden; /* Ensure content stays within */
+}
+
+.survey-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.survey-tile.expanded {
+    border-left-color: #337ab7; /* Different color when expanded */
+    cursor: default;
+}
+
+.survey-tile h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.3em;
+}
+
+.survey-tile p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+
+.survey-answers {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.survey-tile.expanded .survey-answers {
+    max-height: 500px; /* Adjust as needed to show content */
+}
+
+.survey-answers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.survey-answers li {
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 0.85em;
+}
+
+.survey-answers li strong {
+    color: #007bff;
+}
+
+/* Basic loader for when answers are fetching */
+.answers-loading {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 10px;
 }

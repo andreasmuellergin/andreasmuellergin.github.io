@@ -357,6 +357,13 @@ nav a {
     margin-bottom: 3em;
 }
 
+.projekt-title {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
 .projekt-icon {
     display: inline-block; /* Or 'block' if it shouldn't flow with text */
     width: 64px; /* Adjust size as needed, 'em' scales with text */
@@ -470,11 +477,6 @@ footer {
         text-align: center; 
     }
 
-    .about-image {
-        max-width: 70%;
-        margin-bottom: 30px;
-    }
-
     .about-text {
         text-align: center;
     }
@@ -488,6 +490,9 @@ footer {
 
     #header {
         padding: 10px 0;
+    }
+    .hero-content {
+        font-size: 1.5em;
     }
 
     .header-container {
@@ -525,12 +530,26 @@ footer {
     .logos-grid {
         gap: 30px;
     }
+
+    .service-layout {
+        flex-direction: column;
+    }
+
+    .service-text h3,
+    .service-text h4,
+    .service-text p {
+        margin-left: 20px;
+    }
+
+    .projekt-row {
+        flex-direction: column;
+        margin-left: 2em;
+        margin-right: 2em;
+        gap: 1em;
+    }
+
 }
 
-.content-section {
-    /* padding: 50px 0; */
-    margin-bottom: 50px;
-}
 
     .content-section h2 {
         font-size: 1.7em;
